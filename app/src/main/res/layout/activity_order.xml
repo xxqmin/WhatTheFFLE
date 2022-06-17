@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".order">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주문확인"
+        android:fontFamily="@font/katuri"
+        android:layout_marginVertical="10sp"
+        android:textSize="60sp"
+        android:letterSpacing="0.5"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:backgroundTint="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/waffle_order_hidden"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/waffle_order_img"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/menu_wafflemainphoto"
+                    android:background="@drawable/imagerounding"
+                    android:clipToOutline="true"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_toLeftOf="@id/waffle_order_amount"
+                    android:text="수량"
+                    android:textSize="40dp" />
+
+                <RelativeLayout
+                    android:layout_width="206dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/waffle_order_amount"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/waffle_order_hidden_minus"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/minus" />
+
+                    <TextView
+                        android:id="@+id/menu1_textAmount"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/waffle_order_hidden_minus"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="35dp" />
+
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/waffle_order_hidden_plus"
+                        android:src="@drawable/ic_action_name"
+                        android:background="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="centerCrop"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/waffle_order_img"
+                    android:fontFamily="@font/katuri"
+                    android:text="꿀호떡"
+                    android:textSize="70dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:backgroundTint="#CCCCCC"
+                android:layout_marginTop="20dp"
+                android:id="@+id/line1"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="visible"
+                android:id="@+id/jjondeugi_order_hidden">
+
+                <ImageView
+                    android:id="@+id/jjondeugi_order_img"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/menu_jjondeugimainphoto"
+                    android:background="@drawable/imagerounding"
+                    android:clipToOutline="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_toLeftOf="@id/jjondeugi_order_amount"
+                    android:text="수량"
+                    android:textSize="40dp" />
+
+                <RelativeLayout
+                    android:layout_width="206dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="50dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/jjondeugi_order_amount"
+                    android:background="@drawable/border"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/jjondeugi_order_hidden_minus"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/minus" />
+
+                    <TextView
+                        android:id="@+id/menu2_textAmount"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/jjondeugi_order_hidden_minus"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="35dp" />
+
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/jjondeugi_order_hidden_plus"
+                        android:src="@drawable/ic_action_name"
+                        android:background="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="centerCrop"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/jjondeugi_order_img"
+                    android:text="쫀드기"
+                    android:fontFamily="@font/katuri"
+                    android:textSize="70dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:backgroundTint="#CCCCCC"
+                android:layout_marginTop="20dp"
+                android:id="@+id/line2"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="visible"
+                android:id="@+id/jangiji_order_hidden">
+
+                <ImageView
+                    android:id="@+id/jangiji_order_img"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/menu_jangijimainphoto"
+                    android:background="@drawable/imagerounding"
+                    android:clipToOutline="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_toLeftOf="@id/jangiji_order_amount"
+                    android:text="수량"
+                    android:textSize="40dp" />
+
+                <RelativeLayout
+                    android:layout_width="206dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/jangiji_order_amount"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/jangiji_order_hidden_minus"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/minus" />
+
+                    <TextView
+                        android:id="@+id/menu3_textAmount"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/jangiji_order_hidden_minus"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="35dp" />
+
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/jangiji_order_hidden_plus"
+                        android:src="@drawable/ic_action_name"
+                        android:background="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="centerCrop"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/jangiji_order_img"
+                    android:text="잔기지떡"
+                    android:fontFamily="@font/katuri"
+                    android:textSize="70dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:backgroundTint="#CCCCCC"
+                android:layout_marginTop="20dp"
+                android:id="@+id/line3"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="visible"
+                android:id="@+id/jeolpyeon_order_hidden">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="33dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_toLeftOf="@id/jeolpyeon_order_amount"
+                    android:text="수량"
+                    android:textSize="40dp" />
+
+                <ImageView
+                    android:id="@+id/jeolpyeon_order_img"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/menu_jeolpyeonmainphoto"
+                    android:background="@drawable/imagerounding"
+                    android:clipToOutline="true"/>
+
+                <RelativeLayout
+                    android:layout_width="206dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/jeolpyeon_order_amount"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="50dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/border"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/jeolpyeon_order_hidden_minus"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:background="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/minus" />
+
+                    <TextView
+                        android:id="@+id/menu4_textAmount"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/jeolpyeon_order_hidden_minus"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="35dp" />
+
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/jeolpyeon_order_hidden_plus"
+                        android:src="@drawable/ic_action_name"
+                        android:background="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="centerCrop"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/jeolpyeon_order_img"
+                    android:text="절편"
+                    android:fontFamily="@font/katuri"
+                    android:textSize="70dp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:backgroundTint="#CCCCCC"
+                android:layout_marginTop="20dp"
+                android:id="@+id/line4"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/orderComplete"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#DD186D"
+        android:text="주문완료!"
+        android:textSize="25dp" />
+
+
+</LinearLayout>

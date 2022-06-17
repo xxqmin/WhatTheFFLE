@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="오늘은 무엇을 먹어볼까?"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/waffle_mainbtn"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:backgroundTint="#CCCCCC" />
+
+                    <TextView
+                        android:id="@+id/waffle_maintitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="40dp"
+                        android:clickable="false"
+                        android:text="꿀호떡"
+                        android:textSize="60dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/waffle_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/waffle_maintitle"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:clickable="false"
+                        android:text="바삭한 빵 안에 달콤함과 고소함을 \n동시에 느낄 수 있는 호떡소를 넣고 노릇노릇하게\n구워내어 추억 속의 맛을 느낄 수 있는 디저트"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:id="@+id/waffle_img"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:clickable="false"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menu_wafflemainphoto" />
+
+                    <ImageButton
+                        android:id="@+id/waffle_btn"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hamburger"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/waffle_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/waffle_hidden_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사용 제품 : 삼립 꿀호떡\n소요시간 : 3분"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clickable="true"
+                android:id="@+id/jjondeugi_mainbtn">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:backgroundTint="#CCCCCC" />
+
+                    <TextView
+                        android:id="@+id/jjondeugi_maintitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="50dp"
+                        android:text="쫀드기"
+                        android:textSize="60dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/jjondeugi_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/jjondeugi_maintitle"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="문구점에서 파는 쫀드기와 와플의 만남!\n쫀득한 식감으로 묘한 중독성이 있는 간식"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:id="@+id/jjondeugi_img"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menu_jjondeugimainphoto" />
+
+                    <ImageButton
+                        android:id="@+id/jjondeugi_btn"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hamburger"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jjondeugi_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/jjondeugi_hidden_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사용 제품 : 무슨무슨 쫀드기\n소요시간 : null"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clickable="true"
+                android:id="@+id/jangiji_mainbtn">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:backgroundTint="#CCCCCC" />
+
+                    <TextView
+                        android:id="@+id/jangiji_maintitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="50dp"
+                        android:text="잔기지떡"
+                        android:textSize="60dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/jangiji_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/jangiji_maintitle"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="국내 쌀을 막걸리로 발효하고, 천일염을 사용하여\n만든 간식으로 단백한 맛에 소화가 잘되는 간식"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:id="@+id/jangiji_img"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menu_jangijimainphoto" />
+
+                    <ImageButton
+                        android:id="@+id/jangiji_btn"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hamburger"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jangiji_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/jangiji_hidden_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사용 제품 : \n소요시간 : 분"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clickable="true"
+                android:id="@+id/jeolpyeon_mainbtn">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:backgroundTint="#CCCCCC" />
+
+                    <TextView
+                        android:id="@+id/jeolpyeon_maintitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:text="절편"
+                        android:textSize="60dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/jeolpyeon_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/jeolpyeon_maintitle"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="어릴적 어머니꼐서 사오시던 떡의 새로운 변신!\n쫀득쫀득 대한민국 대표 전통 떡 절편와플"
+                        android:textSize="25dp" />
+
+                    <ImageView
+                        android:id="@+id/jeolpyeon_img"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menu_jeolpyeonmainphoto" />
+
+                    <ImageButton
+                        android:id="@+id/jeolpyeon_btn"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hamburger"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jeolpyeon_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/jeolpyeon_hidden_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="구매처 : \n소요시간 : 분"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/choice_btn"
+        android:layout_width="match_parent"
+        android:backgroundTint="#DD186D"
+        android:textColor="@color/white"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="주문 완료 (0)"
+        android:textSize="25dp">
+
+    </Button>
+</LinearLayout>
